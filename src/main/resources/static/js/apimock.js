@@ -16,10 +16,15 @@ apimock = (function () {
             callback(mockdata[cinema_name]);
         },
         getFunctionsByCinemaAndDate: function (cinema_name, fdate, callback) {
-            callback(
+            if(mockdata[cinema_name]==undefined){
+                callback(undefined);
+            }else{
+                callback(
                     mockdata[cinema_name].functions.filter(
                     funct => funct.date.includes(fdate))
-            );
+                );
+            }
+            
         }
 
     }

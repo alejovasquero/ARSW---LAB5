@@ -16,12 +16,18 @@
 	<h1>Cinema</h1>
 	<p>Servicio de funciones en el cinema</p>
 	
-	<input id="cinema"	type="text" >
-	<button name="button">Get Functions</button>
+	<div>
+		<input id="cinema"	type="text" >
+		<input id="fecha"	type="text" >
+		<button name="button" onclick="app.setNameCinema(document.getElementById('cinema').value);
+										app.setDateCinema(document.getElementById('fecha').value);
+										 app.setFuntionsByNameAndDate()">Get Functions</button>
+	</div>
+
 	<table style="width:100%" id="mainTable">
 		<tr>
 		  <th>Movie</th>
-		  <th>Seats</th>
+		  <th>Genre</th>
 		  <th>Date</th>
 		</tr>
 	  </table>
