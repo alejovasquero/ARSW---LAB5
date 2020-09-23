@@ -68,6 +68,7 @@ public class CinemaAPIController {
         String ans = null;
         try {
             System.out.println(fecha);
+            System.out.println(fecha);
             ans = objectToJson(cinemaServices.getFunctionsbyCinemaAndExactDay(name, fecha));
             return new ResponseEntity<>(ans,HttpStatus.ACCEPTED);
         } catch (CinemaException ex) {
